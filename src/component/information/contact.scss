@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper_contact {
+    background: linear-gradient(to right bottom, #FF5D5D, #FFC3C3);
+    padding: 150px 0 100px 0;
+
+    #myBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 20px;
+        border: none;
+        border-bottom: 3px solid #42C2FF;
+        outline: none;
+        background-color: transparent;
+        color: #42C2FF;
+        cursor: pointer;
+        padding: 5px;
+        font-weight: bold;
+
+    }
+
+    .icon-back {
+        font-size: 30px;
+        color: black;
+        margin-left: 50px;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    form {
+        margin: 0 100px;
+        padding: 80px 50px;
+        background-color: #fff;
+        border-radius: 5px;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+            color: #2E0249;
+        }
+
+        button {
+            background: linear-gradient(to right bottom, #42C2FF, #85F4FF);
+            outline: none;
+            border: none;
+
+            &:hover {
+                opacity: 0.9;
+                color: #2E0249;
+            }
+        }
+
+        .hiddenInput {
+            display: none;
+        }
+
+        .lable_imagebtn {
+            cursor: pointer;
+            border-radius: 10px;
+            background: linear-gradient(to right bottom, #E64848, #FF8C8C);
+            padding: 10px;
+            color: #fff;
+            margin-right: 15px;
+
+            &:hover {
+                background: linear-gradient(to left top, #E64848, #FF8C8C);
+            }
+        }
+    }
+
+}
+
+div.DraftEditor-root {
+    border: 1px solid #a3a6a7;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+div.DraftEditor-editorContainer,
+div.public-DraftEditor-content {
+    height: 100%;
+}
+
+div.public-DraftEditorPlaceholder-inner {
+    height: 100%;
+    color: #848788;
+}

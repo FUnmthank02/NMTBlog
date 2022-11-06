@@ -1,0 +1,7 @@
+.MuiAlert-standardSuccess {
+    position: fixed;
+    width: 30vw;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}

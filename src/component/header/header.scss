@@ -1,0 +1,99 @@
+$XS: 480px;
+$SM: 768px;
+$MD: 1024px;
+$XL: 1170px;
+
+
+@mixin mobile {
+    @media (max-width: #{$SM - 1px}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$SM}) and (max-width: #{$MD - 1px}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$MD}) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper_homepage {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    #nav_home {
+        background-color: #DEA057;
+    }
+
+    .logo {
+        width: 200px;
+        height: auto;
+        margin-left: 100px;
+
+        @include mobile {     
+            margin-left: 0;
+        }
+    }
+
+    #navbarSupportedContent {
+        margin-left: 5vw;
+
+        li {
+            margin: 0 20px;
+        }
+    }
+
+    #nav_home #navbarSupportedContent .nav_item_text,
+    .login_text {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: #774360;
+        }
+    }
+
+    #navbarDropdown {
+        height: 60px;
+        width: 60px;
+        border: 1px solid #fff;
+        background-color: rgb(159, 159, 159);
+    }
+
+    .nav_drop {
+        margin-right: 120px;
+
+    }
+
+    .acti {
+        display: flex;
+        align-items: center;
+    }
+
+    #user_email {
+        color: #fff;
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .login_text {
+        color: #fff;
+        text-decoration: none;
+        font-size: 25px;
+    }
+}

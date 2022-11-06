@@ -1,0 +1,248 @@
+$XS: 480px;
+$SM: 768px;
+$MD: 1024px;
+$XL: 1170px;
+
+
+@mixin mobile {
+    @media (max-width: #{$SM - 1px}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$SM}) and (max-width: #{$MD - 1px}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$MD}) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper_about {
+    padding: 200px 0 100px 0;
+
+    #myBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 20px;
+        border: none;
+        border-bottom: 3px solid #42C2FF;
+        outline: none;
+        background-color: transparent;
+        color: #42C2FF;
+        cursor: pointer;
+        padding: 5px;
+        font-weight: bold;
+
+    }
+
+    .left {
+        border: 3px solid #CA955C;
+        border-radius: 10px;
+        padding: 10px;
+        background-image: linear-gradient(to right bottom, #F29393, #FFCCB3);
+        box-shadow: rgba(0, 0, 0, 0.482) 0px 5px 15px;
+
+
+        @include mobile {     
+            margin-bottom: 20px;
+        }
+
+        .line {
+            margin-top: 10px;
+            width: 50px;
+            height: 3px;
+            background-color: #256D85;
+        }
+
+        .title {
+            color: #2E0249;
+        }
+
+        .icon-info {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .text_about {
+            font-size: 20px;
+            color: #774360;
+        }
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    #imgabout {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.751) 0px 5px 15px;
+
+    }
+
+
+    #interest {
+        margin: 100px 0 100px 0;
+    }
+
+    .wrap_stadium {
+        // background-image: linear-gradient(to right bottom,#2B7A0B, #5BB318, #7DCE13);
+        background: linear-gradient(to right bottom, #5FD068, #97DBAE);
+
+        border: 1px solid #4B8673;
+        border-radius: 15px;
+        padding: 15px;
+
+        @include mobile {     
+            background-image: linear-gradient(to right bottom,#2B7A0B, #5BB318, #7DCE13);
+        }
+    }
+
+    .img-line {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        @include mobile {     
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .interest-stadium {
+        display: flex;
+        height: 120px;
+
+        @include mobile {     
+            margin-top: 50px;
+        }
+    }
+
+    .contain-goal {
+        transform: translate(40%, -65%);
+
+        @include mobile {     
+            transform: translate(0, -65%);
+        }
+    }
+
+    #goal {
+        width: 300px;
+
+        @include mobile {     
+            width: 100%;
+        }
+    }
+
+    .img-line img {
+        width: 780px;
+        @include mobile {     
+            width: 100%;
+        }
+    }
+
+    #arrow {
+        width: 80px;
+        transition: transform 1s;
+        cursor: pointer;
+
+        @include mobile {     
+            display: none;
+        }
+    }
+
+    #arrow:hover {
+        transform: translate(-15%, -10%);
+    }
+
+    #ball {
+        width: 70px;
+
+        @include mobile {     
+            width: 30px;
+        }
+    }
+
+    .interest-ball {
+        z-index: 5;
+        margin-top: 50px;
+        padding: 35px 8px;
+        transition: transform 1s;
+        cursor: pointer;
+    }
+
+    .interest-ball:hover {
+        transform: translateX(350%);
+    }
+
+    .interest-content {
+        display: flex;
+        margin-top: 150px;
+        margin-left: 13px;
+    }
+
+    .line {
+        margin: -20px 10px 100px 0;
+        height: 295px;
+        width: 6px;
+        background-color: #2E0249;
+
+        @include mobile {     
+            margin: 0 10px 70px 0;
+            width: 10px;
+            height: 500px;
+        }
+
+        @include tablet {     
+            margin: 0 10px 70px 0;
+            width: 10px;
+            height: 400px;
+        }
+    }
+
+    .main-cont h1 {
+        font-family: "Roboto Mono", monospace;
+        font-size: 35px;
+        margin-bottom: 20px;
+        color: #A91079;
+        display: inline-flex;
+    }
+
+    #football {
+        margin-right: 10px;
+        color: #fff;
+    }
+
+    .main-cont h1::first-letter {
+        color: #fff;
+    }
+
+    .main-cont p {
+        font-family: "Roboto Mono", monospace;
+        font-size: 20px;
+        line-height: 25px;
+        color: #fff;
+
+        @include mobile {     
+            color: #fff;
+        }
+    }
+}
