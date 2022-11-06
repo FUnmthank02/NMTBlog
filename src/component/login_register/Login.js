@@ -21,7 +21,6 @@ function Login() {
                 loginEmail,
                 loginPassword
             )
-            console.log('Success!!!')
             setValid(true)
             setLoginEmail('')
             setLoginPassword('')
@@ -33,7 +32,6 @@ function Login() {
         } catch (error) {
             setValid(false)
             navigate('', { replace: true })
-            console.log(error.message)
         }
     }
 

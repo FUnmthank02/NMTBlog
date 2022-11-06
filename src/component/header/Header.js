@@ -20,8 +20,9 @@ function Header() {
     await signOut(auth)
     localStorage.removeItem('accessAdmin')
     localStorage.removeItem('accessUser')
+    localStorage.removeItem('user')
     localStorage.removeItem('userEmail')
-    navigate('/', { replace: true })
+    navigate('/login', { replace: true })
   }
 
   return (
@@ -47,7 +48,7 @@ function Header() {
             </li>
             
           </ul>
-          {user ?
+          {user != null ?
             <div className="acti">
               <div id='user_email'>{userEmail}</div>
               <div className="nav-item dropdown nav_drop">

@@ -15,8 +15,10 @@ function App() {
   // set lai user khi thay doi
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser)
-    localStorage.setItem('user', currentUser)
-    localStorage.setItem('userEmail', currentUser.email)
+    if( currentUser != null) {
+      localStorage.setItem('user', currentUser)
+      localStorage.setItem('userEmail', currentUser.email)
+    }
   })
 
   return (
