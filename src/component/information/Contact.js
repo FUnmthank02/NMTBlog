@@ -57,29 +57,31 @@ function Contact() {
             {noti && <Notify />}
             <div className="wrapper_contact">
                 <div className="container">
-                    <form onSubmit={handleSubmit}>
-                        <h2>Contact Us</h2>
-                        <div className="form-row">
-                            <div className="form-group col-md-6">
-                                <label htmlFor="inputFName">First name</label>
-                                <input type="text" value={fname} onChange={(e) => setFname(e.target.value)} className="form-control" id="inputFName" placeholder="First Name" required />
+                    <div className="row">
+                        <form className='col-md-12' onSubmit={handleSubmit}>
+                            <h2>Contact Us</h2>
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
+                                    <label htmlFor="inputFName">First name</label>
+                                    <input type="text" value={fname} onChange={(e) => setFname(e.target.value)} className="form-control" id="inputFName" placeholder="First Name" required />
+                                </div>
+                                <div className="form-group col-md-6">
+                                    <label htmlFor="inputLName">Last name</label>
+                                    <input type="text" value={lname} onChange={(e) => setLname(e.target.value)} className="form-control" id="inputLName" placeholder="Last Name" required />
+                                </div>
                             </div>
-                            <div className="form-group col-md-6">
-                                <label htmlFor="inputLName">Last name</label>
-                                <input type="text" value={lname} onChange={(e) => setLname(e.target.value)} className="form-control" id="inputLName" placeholder="Last Name" required />
+                            <div className="form-group">
+                                <label htmlFor="inputEmail">Email</label>
+                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control" id="inputEmail" placeholder="Email" required />
                             </div>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="inputEmail">Email</label>
-                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control" id="inputEmail" placeholder="Email" required />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="inputMessage">Message</label>
-                            <textarea className="form-control" value={message} onChange={(e) => setMessage(e.target.value)} id="inputMessage" rows="5" placeholder="Your message..."></textarea>
-                        </div>
+                            <div className="form-group">
+                                <label htmlFor="inputMessage">Message</label>
+                                <textarea className="form-control" value={message} onChange={(e) => setMessage(e.target.value)} id="inputMessage" rows="5" placeholder="Your message..."></textarea>
+                            </div>
 
-                        <button type='submit' className="btn btn-primary">Submit</button>
-                    </form>
+                            <button type='submit' className="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
                 </div>
 
                 {scrollToTop && <button onClick={topFunction} id="myBtn" title="Go to top">Top</button>}

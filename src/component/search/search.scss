@@ -1,3 +1,27 @@
+$XS: 480px;
+$SM: 768px;
+$MD: 1024px;
+$XL: 1170px;
+
+
+@mixin mobile {
+    @media (max-width: #{$SM - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$SM}) and (max-width: #{$MD - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$MD}) {
+        @content;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +39,11 @@
         background: linear-gradient(to right bottom, #F1A661, #FFD8A9);
         border-radius: 10px;
 
+        @include mobile {
+            display: block;
+            padding-bottom: 20px;
+            width: 100%;
+        }
 
         .img_post_card {
             margin-right: 10px;

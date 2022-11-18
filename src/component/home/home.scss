@@ -57,10 +57,18 @@ $XL: 1170px;
 
     .part {
         text-align: start;
-        width: 15%;
+        width: fit-content;
+
+        @include mobile {
+            width: fit-content;
+        }
 
         h2 {
             transition: transform 1s ease-in-out;
+
+            @include mobile {
+                font-size: 22px;
+            }
         }
 
         .line_part {
@@ -69,7 +77,6 @@ $XL: 1170px;
             height: 3px;
             background-color: #256D85;
             transition: width 1s ease-in-out;
-
         }
 
         &:hover h2 {
@@ -138,6 +145,20 @@ $XL: 1170px;
     .home_post {
         margin: 50px 0;
 
+        .row>div:first-child {
+            @include mobile {
+                order: 2;
+            }
+        }
+
+        .row>div:last-child {
+            @include mobile {
+                order: 1;
+                margin: 0 0 30px 5px;
+            }
+        }
+
+
         .home_post_card {
             display: flex;
             margin: 40px 0;
@@ -145,6 +166,10 @@ $XL: 1170px;
             background: linear-gradient(to right bottom, #F1A661, #FFD8A9);
             border-radius: 10px;
 
+            @include mobile {
+                display: block;
+                padding-bottom: 20px;
+            }
 
             .img_post_card {
                 margin-right: 10px;

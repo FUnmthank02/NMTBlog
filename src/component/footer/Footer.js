@@ -15,11 +15,6 @@ function Footer() {
                     <li>
                         <a className="text_footer" href="/contact">Contact</a>
                     </li>
-                    {localStorage.getItem('accessAdmin') &&
-                        <li>
-                            <a className="text_footer" href="/admin">Admin</a>
-                        </li>
-                    }
                 </ul>
             </div>
             <div className="icon">

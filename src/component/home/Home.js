@@ -7,7 +7,7 @@ import Parser from 'html-react-parser';
 import { useNavigate } from 'react-router-dom';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import { storage } from "../../firebase/firebase_config"
-import { ref, deleteObject  } from "firebase/storage"
+import { ref, deleteObject } from "firebase/storage"
 
 
 // API post: https://63089daa722029d9ddd3b6dc.mockapi.io/api/post
@@ -73,10 +73,9 @@ function Home() {
     const handleDeleteImageFromStorage = () => {
         const desertRef = ref(storage, `images/${deleteImage}`)
         deleteObject(desertRef).then(() => {
-            console.log(`image deleted from storage: ${deleteImage}`)
-          }).catch((err) => {
+        }).catch((err) => {
             console.log(err.message)
-          });
+        });
     }
 
     //update
@@ -173,12 +172,13 @@ function Home() {
 
                 {/* post */}
                 <div className="home_post">
-                    <div className="part">
-                        <h2>NEW POST</h2>
-                        <div className="line_part"></div>
-                    </div>
+
                     <div className="row">
                         <div className="col-md-9 col-sm-9 col-xs-12">
+                            <div className="part">
+                                <h2>NEW POST</h2>
+                                <div className="line_part"></div>
+                            </div>
                             {/* map all post and display them  */}
                             {APIData.map((data, index) => (
                                 <div key={index} className="home_post_card">
