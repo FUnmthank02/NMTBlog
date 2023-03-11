@@ -174,7 +174,7 @@ function Home() {
                 <div className="home_post">
 
                     <div className="row">
-                        <div className="col-md-9 col-sm-9 col-xs-12">
+                        <div className="col-lg-9 col-sm-12 col-xs-12">
                             <div className="part">
                                 <h2>NEW POST</h2>
                                 <div className="line_part"></div>
