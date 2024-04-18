@@ -153,7 +153,7 @@ function Home() {
                             <div className="left" data-aos="fade-right">
                                 <div className="mb-3 line"></div>
                                 <h3 className="mb-3 title">Welcome to NMT-Blog</h3>
-                                <p className="text_home">Hello guys, first of all I'm so glad you're here. This is my blog where
+                                <p className="text_home">.Hello guys, first of all I'm so glad you're here. This is my blog where
                                     I write post and share my experiences, story or something interesting with you all.
                                     This is a place where I can express my feelings or entertain through articles,
                                     I also hope you will enjoy it, and this blog will reach more people. Thank you!</p>
